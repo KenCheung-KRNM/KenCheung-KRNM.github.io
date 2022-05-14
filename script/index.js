@@ -1,16 +1,33 @@
 $(document).ready(function(){
   // $('#header').load('./component/head-bar.html');
+  const random = Math.floor(Math.random() * 3) + 1;
+  switch (random) {
+    case 3: 
+      $('#photo-js').append('<img src="./pic/photo_2022-05-09_16-22-34.jpg">');
+      break;
+    case 2:
+      $('#photo-js').append('<img src="./pic/photo_2022-05-15_01-28-33.jpg">');
+      break;
+    case 1:
+      $('#photo-js').append('<img src="./pic/photo_2022-05-15_01-28-35.jpg">');
+      break;
+    default: break;
+}
   $('#btn-about').on('click', () => {
     $('#btn-work').removeClass('active');
-    $('#about-section').animate({
-      top: '',
-    }, 500);
+    $('#about-section').removeClass('inactive-section');
+    $('#work-section').addClass('inactive-section');
+    // $('#about-section').animate({
+    //   top: '',
+    // }, 500);
   });
   $('#btn-work').on('click', () => {
     $('#btn-work').addClass('active');
-    $('#about-section').animate({
-      top: '-=1000px',
-    }, 500);
+    $('#about-section').addClass('inactive-section');
+    $('#work-section').removeClass('inactive-section');
+    // $('#about-section').animate({
+    //   top: '-=1000px',
+    // }, 500);
   });
   $('#btn-skills').on('click', () => {
     $('#btn-skills').addClass('closed-btn');

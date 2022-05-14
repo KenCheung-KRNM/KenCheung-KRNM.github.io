@@ -68,7 +68,18 @@ div#fake-line.active {
   animation-timing-function: ease-in;
 }
 
+div#work-section div.title-part div.tags div.tag div{
+  animation-name: tag-ani;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in;
+}
+
 /* */
+@keyframes tag-ani {
+  0% { max-width: 0% }
+  100% { max-width: 100%; }
+}
+
 @keyframes hr-ani {
   0% { 
     width: 1%;
